@@ -8,12 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var locationDataManager = LocationDataManager()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            VStack {
+                switch locationDataManager.locationManager.authorizationStatus {
+                case .authorizedWhenInUse:  // Location services are available.
+                    // Insert code here of what should happen when Location services are authorized
+                    Text("Your current location is:")
+                    Text("Latitude: \(locationDataManager.latitude)")
+                    Text("Longitude: \(locationDataManager.longitude)")
+                    Text("Address: \(locationDataManager.address)")
+                    Text("City: \(locationDataManager.city)")
+                    Text("State: \(locationDataManager.state)")
+                    Text("Zip Code: \(locationDataManager.zip)")
+                    Text("Contry: \(locationDataManager.country)")
+                    
+                case .restricted, .denied:  // Location services currently unavailable.
+                    // Insert code here of what should happen when Location services are NOT authorized
+                    Text("Current location data was restricted or denied.")
+                case .notDetermined:        // Authorization not determined yet.
+                    Text("Finding your location...")
+                    ProgressView()
+                default:
+                    ProgressView()
+                }
+            }
         }
         .padding()
     }

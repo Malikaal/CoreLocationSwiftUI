@@ -11,6 +11,7 @@
 		DCD2D33529A9317900C932E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2D33429A9317900C932E6 /* ContentView.swift */; };
 		DCD2D33729A9317A00C932E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD2D33629A9317A00C932E6 /* Assets.xcassets */; };
 		DCD2D33A29A9317A00C932E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD2D33929A9317A00C932E6 /* Preview Assets.xcassets */; };
+		DCD2D34129A931AB00C932E6 /* LoactionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2D34029A931AB00C932E6 /* LoactionDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		DCD2D33429A9317900C932E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DCD2D33629A9317A00C932E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCD2D33929A9317A00C932E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DCD2D34029A931AB00C932E6 /* LoactionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoactionDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				DCD2D33429A9317900C932E6 /* ContentView.swift */,
 				DCD2D33629A9317A00C932E6 /* Assets.xcassets */,
 				DCD2D33829A9317A00C932E6 /* Preview Content */,
+				DCD2D34029A931AB00C932E6 /* LoactionDataManager.swift */,
 			);
 			path = CoreLocationSwiftUI;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCD2D33529A9317900C932E6 /* ContentView.swift in Sources */,
+				DCD2D34129A931AB00C932E6 /* LoactionDataManager.swift in Sources */,
 				DCD2D33329A9317900C932E6 /* CoreLocationSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +274,7 @@
 				DEVELOPMENT_TEAM = 6HJGRNJXXR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App needs to access your loaction data to tell your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +304,7 @@
 				DEVELOPMENT_TEAM = 6HJGRNJXXR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App needs to access your loaction data to tell your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
