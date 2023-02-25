@@ -71,19 +71,20 @@ class LocationDataManager : NSObject, ObservableObject, CLLocationManagerDelegat
             }
 
             // Access the address properties of the placemark
-            let address = placemark.name ?? "1"
-            let city = placemark.locality ?? "2"
-            let state = placemark.administrativeArea ?? "3"
-            let zip = placemark.postalCode ?? "4"
-            let country = placemark.country ?? "5"
-            self.address = placemark.name ?? "Address Not Found"
-            self.city = placemark.locality ?? "City Not Found"
-            self.state = placemark.administrativeArea ?? "State Not Found"
-            self.zip = placemark.postalCode ?? "Zip Code Not Found"
-            self.country = placemark.country ?? "Country Not Found"
+            let address = placemark.name
+            let city = placemark.locality
+            let state = placemark.administrativeArea
+            let zip = placemark.postalCode
+            let country = placemark.country
+            
+            self.address = address ?? "Address Not Found"
+            self.city = city ?? "City Not Found"
+            self.state = state ?? "State Not Found"
+            self.zip = zip ?? "Zip Code Not Found"
+            self.country = country ?? "Country Not Found"
             
             // Use the address properties as needed
-            print("\(address), \(city), \(state) \(zip), \(country)")
+//            print("\(address), \(city), \(state) \(zip), \(country)")
         }
     }
     
